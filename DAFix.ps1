@@ -3,7 +3,7 @@ $xmlurl = "https://secureupdater.s3.us-east-2.amazonaws.com/downloads/Drive+Advi
 $userID = [System.Security.Principal.WindowsIdentity]::GetCurrent().User.Value
 
 #download the XML for Drive Advisor schedualed task
-Invoke-WebRequest $xmlurl -OutFile $DesktopPath 
+Invoke-RestMethod -Uri $xmlurl -OutFile $xmlFileName
 #Read in the XML document
 [xml]$xmlDoc = (Get-Content $xmlFileName)
 #Modify the UserID string to be the current loged in user
