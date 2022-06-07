@@ -11,6 +11,6 @@ $xmlDoc.Task.Principals.Principal.UserId = $userID
 #Save the new xml
 $xmlDoc.Save($xmlFileName)
 #Import into schedualed tasks
-schtasks.exe /Create /XML $xmlFileName /tn "Drive-Adviser"
+schtasks.exe /Create /XML $xmlFileName /tn "Drive Adviser"
 #Delete the XML
 Remove-Item -Path $xmlFileName
