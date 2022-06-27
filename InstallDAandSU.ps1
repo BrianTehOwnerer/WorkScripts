@@ -1,7 +1,8 @@
+$DesktopPath = [Environment]::GetFolderPath("Desktop")
 $SecureUpdaterurl = "https://secureupdater.s3.us-east-2.amazonaws.com/downloads/SecureUpdater.msi"
-$SUoutpath = "$PSScriptRoot\SecureUpdater.msi"
+$SUoutpath = "$DesktopPath\SecureUpdater.msi"
 $DriveAdvisorurl = "https://secureupdater.s3.us-east-2.amazonaws.com/downloads/driveadviser.msi"
-$DAoutpath = "$PSScriptRoot\driveadvisor.msi"
+$DAoutpath = "$DesktopPath\driveadvisor.msi"
 
 #checks for SU and Drive Advisor, if not found installs them from the folders.
 if (Test-Path -Path "C:\Program Files (x86)\Secure Updater\Secure Updater.exe") {
